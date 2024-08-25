@@ -17,7 +17,6 @@ def led1_blink(stop):
         #lock.acquire()
         cond = random.randint(0, 100)
         sleep(0.5)
-        # cond = 63                   
         if(cond%7==0):
             #cnt+=1
             lock.acquire()
@@ -49,6 +48,8 @@ def led2_blink(stop):
             sleep(1)
             print("---------")
             lock.release()
+        #else:
+        #    print('led2 off: '+str(cond))
 
 def run():
     STOP = False
@@ -70,18 +71,9 @@ def run():
         if(input()=="c"):
             STOP = False
             run()
-            """
-            thread1 = threading.Thread(target = led1_blink, args=(lambda: STOP,))
-            thread2 = threading.Thread(target = led2_blink, args=(lambda: STOP,))
-            thread1.daemon = True
-            thread2.daemon = True
-            thread1.start()
-            thread2.start()
-            """
 
     thread1.join()
     thread2.join()
-
 
 def main():
     run()
