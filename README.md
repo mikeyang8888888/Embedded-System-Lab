@@ -18,7 +18,7 @@
 ### 3) C++實作
 - Idea
     - 採用Peterson's Algorithm的方式，將亂數生成和控制LED IO的地方lock住。
-    - 用wait的概念，當收到wait signal，led thread會busy waiting，待signal收到continue恢復運行。收到stop signal結束thread。
+    - 當收到wait signal，led thread會busy waiting，待signal收到continue恢復運行。收到stop signal結束thread。
     - thread之間透過交換lock的方式，輪流產生亂數執行LED task
 - Library
     - pthread
