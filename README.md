@@ -3,7 +3,7 @@
 - 有二個 Threads，以下命名為 Thread-A 及 Thread-B，各自控制 LED-A 及 LED-B
 - Thread-A 取 1~100 亂數，若亂數為 7 的倍數，且 Thread-B 之 LED 沒亮燈時，LED-A 亮一秒後滅掉
 - Thread-B 取 1~100 亂數，若亂數為 9 的倍數，且 Thread-A 之 LED 沒亮燈時，LED-B 亮一秒後滅掉
-- 上述動作，透過鍵盤輸入控制threads停止與再執行。
+- 上述動作，透過terminal輸入控制threads停止與再執行。
 ## B. Demo
 [Demo video](https://youtu.be/pDDI-95khnU)
 ## C. Implement
