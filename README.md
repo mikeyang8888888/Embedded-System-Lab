@@ -28,7 +28,7 @@
         > g++ -o test led.cpp -lwiringPi -lpthread
     - Run
         > ./test
-- Keyboard command
+- Command
   - 輸入1: Make threads wait
   - 輸入2: Threads continue
   - 輸入3: Stop and kill threads, finish process
